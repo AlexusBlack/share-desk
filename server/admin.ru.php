@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 
 <head>
-	<title>ShareDesk admin panel</title>
+	<title>ShareDesk админка</title>
 	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
 	<style>
 	.shot_table {
@@ -24,8 +24,8 @@
 
 <body bgcolor="#ffffff">
 	<center><table border=1 width="1080px" id="main">
-		<tr><td>Display: <a href="?time=0">Today</a>, <a href="?time=2">Last hour</a>, <a href="?time=1">Month</a>, <a href="?time=3">All time</a></td></tr>
-		<tr><td>Filter by:</td></tr>
+		<tr><td>Вывести за: <a href="?time=0">Сегодня</a>, <a href="?time=2">Последний час</a>, <a href="?time=1">Месяц</a>, <a href="?time=3">всё время</a></td></tr>
+		<tr><td>Фильтровать по:</td></tr>
 		
 		<tr><td>
 <?php
@@ -57,7 +57,7 @@ $res=mysql_query($query) or die(mysql_error());
 while($row=mysql_fetch_array($res)) {
 	print "<table class='shot_table' >
 	<tr><td><a href='/?key=".$row[id]."' target='viewer'><img src='shots/current".$row[id]."s.jpg' id='shot'></a></td></tr>
-	<tr><td>Started at: ".$row[dd].".".$row[mm].".".$row[yyyy]." at ".$row[hh]."</td></tr>
+	<tr><td>Запущено: ".$row[dd].".".$row[mm].".".$row[yyyy]." в ".$row[hh]." часа(ов)</td></tr>
 	</table>";
 }
 
