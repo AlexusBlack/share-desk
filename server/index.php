@@ -1,12 +1,12 @@
-<?
+<?php
 $key=@$_GET['key'];
 $key=intval($key);
 if($key==null) {
-	include("indexi.php");
+	include("frontpage.html");
 	exit;
 }
 $suf="jpg";
-if(file_exists ( "shots/current".$keys.".png" ) )
+if(file_exists ( "shots/current".$key."s.png" ) )
 	$suf="png";
 ?>
 <html>
